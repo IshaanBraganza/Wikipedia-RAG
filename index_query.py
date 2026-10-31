@@ -1,6 +1,5 @@
 # lowkey not an index and maybe inneficient highly
 import numpy as np
-import json
 from sentence_transformers import SentenceTransformer
 import gc
 from numba import jit
