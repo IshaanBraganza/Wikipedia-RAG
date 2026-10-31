@@ -2,7 +2,7 @@
 # go through each line, get the raw text
 # make chunks based on 500-10 words (490 words + 10 from the previous chunk)
 # save this to a new jsonl file with the text, file number, and title of the wikipage it is found in
-# every 10,000 chunks create a new jsonl file (important for embedding later)
+# every 500,000 chunks create a new jsonl file (important for embedding later)
 
 import json
 

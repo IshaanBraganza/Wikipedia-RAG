@@ -6,7 +6,7 @@ from numba import jit
 
 """
 
-Use Cosign similarity to check, idgaf about time, that i have lots. Iterate through all chunks (yes all) and compare using cosign similarity for all embeddings, store the top n (user input) as a list with the index and file number. Then just find the chunk and write to a .txt file.
+Use Cosign similarity to check. Iterate through all chunks (yes all) and compare using cosign similarity for all embeddings, store the top n (user input) as a list with the index and file number. Then just find the chunk and write to a .txt file.
 
 import numpy as np
 
@@ -29,7 +29,7 @@ print(f"Similarity Score: {similarity_percentage:.2f}%")
 """
 
 
-
+# 
 import psutil, threading, time
 
 def monitor():
@@ -50,7 +50,7 @@ t.start()
 chunks_dir = "chunks/"
 embeddings_dir = "embeddings/"
 
-model = SentenceTransformer('all-MiniLM-L6-v2', device='cpu')
+model = SentenceTransformer('all-MiniLM-L6-v2')
 
 question_encoding = model.encode(input("What do you want to search? "), show_progress_bar=True)
 
